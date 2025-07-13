@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="loanJPA")
 public class Loan {
 
     @Id

@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "bookJPA")
 public class Book {
     @Id
     @Column(name = "id")

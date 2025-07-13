@@ -1,6 +1,5 @@
 package com.aly.brightskies.task2;
 
-import com.aly.brightskies.task2.jdbc.RawSQLforLibrary;
 import com.aly.brightskies.task2.repositories.BookRepo;
 import com.aly.brightskies.task2.repositories.LoanRepo;
 import com.aly.brightskies.task2.repositories.MemberRepo;
@@ -28,14 +27,13 @@ public class Task2Application {
 
     @Bean
     public CommandLineRunner run(
-            RawSQLforLibrary rawSQLforLibrary,
             BookRepo bookRepo,
             MemberRepo memberRepo,
             LoanRepo loanRepo
     ) {
         return args -> {
             System.out.println("Running JDBC inserts...");
-            rawSQLforLibrary.testSQL(); // Populate DB with raw inserts
+
 
             System.out.println("Available Books:");
             List<Book> availableBooks = bookRepo.findAllAvailableBooks();

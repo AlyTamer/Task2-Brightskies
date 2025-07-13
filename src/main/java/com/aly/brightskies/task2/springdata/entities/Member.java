@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name="memberJPA")
 public class Member {
     @Id
     private Long id;
