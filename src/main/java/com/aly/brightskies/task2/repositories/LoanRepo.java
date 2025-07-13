@@ -12,6 +12,6 @@ public interface LoanRepo extends JpaRepository<Loan, Long> {
     List<Book> findAllBooksLoanedByMember(Member m);
     @Query("SELECT COUNT(l) FROM Loan l WHERE l.member = :m " )
     int countBookLoanedByMember(Member m);
-    @Query("SELECT l FROM Loan l WHERE (l.loanDate<:current_date -14)")
+    @Query("SELECT l FROM Loan l WHERE (l.loanDate<:current_date)")
     List<Loan> findAllOverdue(Date current_date);
 }

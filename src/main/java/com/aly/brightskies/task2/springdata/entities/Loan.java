@@ -7,6 +7,7 @@ import java.util.Date;
 public class Loan {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
